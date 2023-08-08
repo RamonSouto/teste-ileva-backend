@@ -15,16 +15,17 @@ class PessoaController
                 var_dump($_POST);
             }
     }
+
     public function post(){
         return PessoaModel::Insert($_POST);
     }
+
     public function put($id){
         $data = json_decode(file_get_contents("php://input"));
         return PessoaModel::Edit($id, $data);
     }
-    public function delete($id){
 
+    public function delete($id){
         return PessoaModel::Delete($id);
-        
     }
 }

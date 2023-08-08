@@ -19,6 +19,7 @@ class PessoaModel
             return new Exception("Nenhum registro encontrado");
         }
     }
+    
     public static function SelectOne(int $id){
         $sql = 'SELECT * FROM ' . self::$table . ' WHERE id = :id';
 
